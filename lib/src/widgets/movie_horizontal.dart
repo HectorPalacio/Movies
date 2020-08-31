@@ -19,8 +19,11 @@ class MovieHorizontal extends StatelessWidget {
       }
     });
     return Container(
+      width: double.infinity,
       height: _screenSize.height * 0.25,
       child: PageView.builder(
+        physics: BouncingScrollPhysics(),
+        scrollDirection: Axis.horizontal,
         pageSnapping: false,
         controller: _pageController,
         //children: _tarjetas(context),
